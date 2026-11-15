@@ -1,8 +1,8 @@
-# har-mcp
+# har_mcp
 
 一个 MCP 服务器，让 AI agent 能够读取和分析 HAR（HTTP Archive）抓包文件。
 
-浏览器导出的抓包动辄几十上百 MB，整份塞进上下文既不现实也不划算。`har-mcp`
+浏览器导出的抓包动辄几十上百 MB，整份塞进上下文既不现实也不划算。`har_mcp`
 把分析拆成十四个细粒度工具，agent 可以先看整体概况，再按域名、路径、状态码
 缩小范围，最后只读取需要的那一条请求的头部或响应体。每次回答都控制在几 KB
 以内。
@@ -28,11 +28,11 @@
 ```json
 {
   "mcpServers": {
-    "har-mcp": {
+    "har_mcp": {
       "command": "go",
       "args": [
         "run",
-        "github.com/baiji520/har_mcp/cmd/har-mcp@main"
+        "github.com/baiji520/har_mcp/cmd/har_mcp@main"
       ]
     }
   }
@@ -49,7 +49,7 @@ tag 或 commit，例如 `@v1.1.0`。
 配置好后直接让 agent 分析抓包，例如：
 
 ```
-用 har-mcp 看看 /path/to/capture.har 里有哪些接口
+用 har_mcp 看看 /path/to/capture.har 里有哪些接口
 ```
 
 所有工具都通过 `file` 参数接收抓包文件的绝对路径，一个服务器实例可以服务任意

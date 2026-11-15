@@ -1,6 +1,6 @@
-# har-mcp — HAR reader as an MCP server
+# har_mcp — HAR reader as an MCP server
 
-`har-mcp` is a Model Context Protocol server (stdio transport) that exposes a
+`har_mcp` is a Model Context Protocol server (stdio transport) that exposes a
 HAR (HTTP Archive) reader to agents: CodeBuddy Code, Claude Desktop, Cursor, or
 anything else that speaks MCP.
 
@@ -8,7 +8,7 @@ The point is context economy. A 100MB capture never enters the model's context:
 the agent surveys, filters, then reads one entry at a time. Every response is
 size-capped, so a query answers in a couple of KB.
 
-This project has **no CLI**. `cmd/har-mcp` is the MCP server; `internal/har` is
+This project has **no CLI**. `cmd/har_mcp` is the MCP server; `internal/har` is
 the implementation it calls.
 
 ## Register with a client
@@ -19,11 +19,11 @@ so there is no install step and no local checkout.
 ```json
 {
   "mcpServers": {
-    "har-mcp": {
+    "har_mcp": {
       "command": "go",
       "args": [
         "run",
-        "github.com/baiji520/har_mcp/cmd/har-mcp@main"
+        "github.com/baiji520/har_mcp/cmd/har_mcp@main"
       ]
     }
   }

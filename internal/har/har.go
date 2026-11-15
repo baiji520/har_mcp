@@ -19,7 +19,7 @@
 // by name or by shape. Treat redaction as strong, not as a guarantee.
 //
 // The package has no CLI entry point: Invoke is the only way in, and
-// cmd/har-mcp exposes each command as an MCP tool.
+// cmd/har_mcp exposes each command as an MCP tool.
 package har
 
 import (
